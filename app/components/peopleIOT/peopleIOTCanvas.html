@@ -127,6 +127,7 @@
 				if( typeof(mobilelist[mobile.mobile]) !== 'undefined' ){
 					var move_space_x = new_position_x-mobilelist[mobile.mobile].position_x;
 					var move_space_y = new_position_y-mobilelist[mobile.mobile].position_y;
+					mobilelist[mobile.mobile].name = mobile.name;
 					var i = 1;
 					var myTimer = setInterval(function(){
 						i += 1;

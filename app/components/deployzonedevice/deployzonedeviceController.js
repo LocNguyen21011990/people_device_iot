@@ -249,7 +249,6 @@ app.controller('deployzonedeviceCtrl', ['$scope', '$state', 'ConfigService', '$h
 
         objArray.map(function(o) {
             if (o.deviceId == '2C8FEF5D3639430E') {
-                console.log(o);
                 o.remove();
             }
         })

@@ -13,6 +13,8 @@ app.controller('zoneNewCtrl', ['$scope', '$http', '$state', 'ConfigService', 'Up
             dataZone.name = $scope.name;
             dataZone.locationid = $scope.locationId;
             dataZone.description = $scope.description;
+            dataZone.width = $scope.width;
+            dataZone.height = $scope.height;
             dataZone.status = $scope.status;
             dataZone.datecreated = new Date();
 

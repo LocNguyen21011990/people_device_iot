@@ -406,4 +406,14 @@ app.config(function($stateProvider, $urlRouterProvider, $transitionsProvider) {
                 }
             }
         })
+
+        .state('home.admin.assigndevice', {
+            url: '/assign-device',
+            views: {
+                'content@': {
+                    templateUrl: '/app/components/assigndevice/assignform.html',
+                    controller: 'assignDeviceCtrl'
+                }
+            }
+        })
 });

@@ -9,15 +9,22 @@
     <div class="row">
         <div class="col-md-12">
             <div class="action-box">
-                <div class="input-group search-box">
-                    <input type="text" class="form-control" id="search" ng-model="searchPeople">
-                    <div class="input-group-addon"><i class="fa fa-search"></i></div>
-                </div>
                 <div class="select-box">
-                    <select class="form-control" ng-model="select_device_type" ng-change="change_filter_type()" >
+                    <select class="form-control" ng-model="select_device_type" ng-change="change_filter_type()">
                         <option value="server">Server</option>
                         <option value="relay">Relay</option>
                         <option value="mobile">Mobile</option>
+                    </select>
+                </div>
+                <div class="select-box">
+                    <select class="form-control" ng-model="zoneId" ng-change="selectZone(zoneId)">
+                        <option value="{{zone.id}}" ng-repeat="zone in list_zone">{{zone.name}}</option>
+                    </select>
+                </div>
+                <div class="select-box">
+                    <select class="form-control" ng-model="locationId" ng-change="selectZoneByLocation(locationId)">
+                        <option value="" selected>Select Location</option>
+                        <option value="{{location.id}}" ng-repeat="location in list_location">{{location.name}}</option>
                     </select>
                 </div>
             </div>
